@@ -1,0 +1,134 @@
+
+rt url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+
+/* ====================================================================================== */
+/* General document settings */
+/* ====================================================================================== */
+
+body{
+	margin: 0px;
+	background-color: white;
+	font-family: "Open Sans", trebuchet ms;
+}
+
+.bold{
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+
+a1{
+	margin: 0px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+select{
+	font-family: "Open Sans", trebuchet ms;
+	padding: 5px;
+	font-size: 16px;
+	max-height: 300px;
+}
+
+/* ====================================================================================== */
+/* Top of page element */
+/* ====================================================================================== */
+
+.page-top{
+	width: 100%;
+	height: 36px;
+	
+	margin: 0px;
+	padding: 0px;
+	
+	background: #82b3ff;
+	display: table;
+}
+
+.page-top span{
+	font-size: 22px;
+	font-weight: bold;
+	color: black;
+	
+	margin: auto;
+	
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* ====================================================================================== */
+/* Top menu */
+/* ====================================================================================== */
+
+.page-menu{
+	width: 100%;
+	background: #e0e0e0;
+	font-size: 15px;
+}
+
+.page-menu .table{
+	display: table;
+	margin: auto;
+}
+
+.page-menu .element{
+	display: table-cell;
+	padding: 2px;
+}
+
+/* ====================================================================================== */
+/* Middle menu */
+/* ====================================================================================== */
+
+.page-middle{
+	width: 100%;
+    background: #e0e0e0;
+	font-size: 16px;
+	padding-top: 5px; 
+	padding-bottom: 5px;
+	text-align: center;
+/*	font-weight: bold; */
+	vertical-align: top; 
+}
+
+/* ====================================================================================== */
+/* Element containing map */
+/* ====================================================================================== */
+
+#page-map{
+	width: 59%;
+	margin: auto;
+	margin-top: 10px;
+}
+
+
+/* ====================================================================================== */
+/* Bottom of page element */
+/* ====================================================================================== */
+
+.page-footer{
+	width: 100%;
+	height: 12px;
+	
+	margin: 0px;
+	padding: 0px;
+	display: table;
+	
+/*  position: absolute;
+ *    right: 0;
+ *      bottom: 0;
+ *        left: 0; */
+}
+
+.page-footer span{
+	font-size: 13px;
+/*	font-weight: bold; */
+	color: black;
+	
+	margin: auto;
+	
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}

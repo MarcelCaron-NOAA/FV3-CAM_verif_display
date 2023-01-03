@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EMC FV3-CAM Verification</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="https://www.emc.ncep.noaa.gov/users/verification/style/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://www.emc.ncep.noaa.gov/users/verification/style/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+</head>
+
+<script>
+function createDropdown(opt) {
+  /* When the user clicks on the button, 
+     toggle between hiding and showing the dropdown content */
+  document.getElementById(opt.nextElementSibling.id).classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  var oFrame = document.getElementById("body_frame");
+  oFrame.contentWindow.document.onclick = function() {
+        var i;
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+  };
+  if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+          }
+      }
+  }
+  if (event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (event.target.nextElementSibling.id != openDropdown.id) {
+              if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+               }
+          }
+      }
+  }
+}
+</script>
+
+
+<body>
+<div id="page" class="container">
+	<div id="header">
+		<div id="logo">
+			<img src="https://www.emc.ncep.noaa.gov/users/verification/style/images/noaa.png" alt="" width="100" />
+			<img src="https://www.emc.ncep.noaa.gov/users/verification/style/images/nws.png" alt="" width="100" />
+			<h1><font color="white">EMC<br>FV3-CAM<br>Verification</font></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class=><a href="../.." accesskey="1" title="">Home</a></li>
+				<div class="dropdown">
+                                   <button onclick="createDropdown(this)" class="dropbtn" accesskey="2">Operational Comparison Stats &rsaquo;&rsaquo;</button>
+                                        <div id="Dropdown_recent" class="dropdown-content">
+                                            <!--a href="../../para_exp/scorecards">Scorecards</a-->
+                                            <a href="../../python_ops/sfc_upper">Surface & Upper Air</a>
+                                            <a href="../../python_ops/precip">Precipitation</a>
+                                            <a href="../../python_ops/radar">Reflectivity & Echo Top</a>
+                                            <!--a href="../../para_exp/surrogate_svr">Surrogate Severe</a-->
+                                            <a href="../../python_ops/cape">CAPE</a>
+                                            <a href="../../python_ops/ceil_vis">Ceiling & Visibility</a>
+                                        </div>
+				</div>
+				<!--div class="dropdown">
+                                   <button onclick="createDropdown(this)" class="dropbtn" id="active" accesskey="3">LAM-X vs. LAM<br>Experiment Stats &rsaquo;&rsaquo;</button>
+                                        <div id="Dropdown_lam" class="dropdown-content">
+                                            <a href="../../lam_exp/scorecards">Scorecards</a>
+                                            <a href="../../lam_exp/sfc_upper">Surface & Upper Air</a>
+                                            <a href="../../lam_exp/precip">Precipitation</a>
+                                            <a href="../../lam_exp/radar">Reflectivity & Echo Top</a>
+                                            <a href="../../lam_exp/surrogate_svr">Surrogate Severe</a>
+                                            <a href="../../lam_exp/cape">CAPE</a>
+                                            <a href="../../lam_exp/ceil_vis">Ceiling & Visibility</a>
+                                        </div>
+				</div-->
+				<!--div class="dropdown">
+                                   <button onclick="createDropdown(this)" class="dropbtn" accesskey="4">LAM Parallel Stats &rsaquo;&rsaquo;</button>
+                                        <div id="Dropdown_da" class="dropdown-content">
+                                            <a href="../../da_exp/scorecards">Scorecards</a>
+                                            <a href="../../da_exp/sfc_upper">Surface & Upper Air</a>
+                                            <a href="../../da_exp/precip">Precipitation</a>
+                                            <a href="../../da_exp/radar">Reflectivity & Echo Top</a>
+                                            <a href="../../da_exp/surrogate_svr">Surrogate Severe</a>
+                                            <a href="../../da_exp/cape">CAPE</a>
+                                            <a href="../../da_exp/ceil_vis">Ceiling & Visibility</a>
+                                        </div>
+				</div-->
+				<li><a href="https://www.emc.ncep.noaa.gov/users/meg/hrefv3/verif/" accesskey="6" title="" target="_blank">HREFv3 Evaluation<br>Verification Graphics</a></li>
+				<li><a href="https://www.emc.ncep.noaa.gov/users/emc.campara/rrfs/" accesskey="7" title="" target="_blank">FV3-CAM<br>Forecast Graphics</a></li>
+                                <li></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div id="banner">
+                    <iframe id="body_frame" src="performance_fcstthresh_precip.php" width="1100" height="750" style="border: 1px solid black;"></iframe>
+		</div>
+                <div id="contact">
+                	<p><font size="2"><b>CONTACT INFORMATION</b>
+			<br><b>Marcel.Caron@noaa.gov</b> - FV3-CAM Verification
+			<br><b>Logan.Dawson@noaa.gov</b> - FV3-CAM Verification
+			<br><b>Benjamin.Blake@noaa.gov</b> - FV3LAM forecasts
+			<br><b>Eric.Rogers@noaa.gov</b> - FV3LAM-DA and FV3LAM-DA-X forecasts
+			<br><b>Jacob.Carley@noaa.gov</b> - FV3-CAM Project Lead
+		</font></div>
+		<div id="footer"><font size="2">
+			<img src="https://www.emc.ncep.noaa.gov/users/verification/style/images/noaa.png" alt="" width="100" />
+			<img src="https://www.emc.ncep.noaa.gov/users/verification/style/images/nws.png" alt="" width="100" />
+			<img src="https://www.emc.ncep.noaa.gov/users/verification/style/images/commerce.png" alt="" width="100" />
+			<img src="https://www.emc.ncep.noaa.gov/users/verification/style/images/usagov.png" alt="" width="100" />
+			<br>
+			<a href="https://www.weather.gov/privacy">Privacy Policy</a> | <a href="https://www.weather.gov/disclaimer">Disclaimer</a> | <a href="https://www.commerce.gov">Department of Commerce</a> | <a href="https://www.noaa.gov">NOAA</a> | <a href="https://www.weather.gov">NWS</a> | <a href="https://www.ncep.noaa.gov">NCEP</a> | <a href="https://www.emc.ncep.noaa.gov">EMC</a>
+		</font></div>
+	</div>
+</div>
+</body>
+</html>
